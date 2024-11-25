@@ -8,7 +8,7 @@ Implement a program that converts the grayscale image representation from int ba
 Input: height, width, integer pixel values <br>
 Example. <br>
 
-Input:
+Input: <br>
 height: 3 <br>
 width 4 <br>
 64 89 114 84 <br>
