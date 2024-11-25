@@ -8,10 +8,10 @@ extern void imgCvtGrayInttoFloat(int height, int width, int* intPixels, float* f
 
 int main() {
     int height, width;
-
-    scanf_s("%d %d", &height, &width);
-
-
+    printf("Enter height: ");
+    scanf_s("%d", &height);
+    printf("Enter width: ");
+    scanf_s("%d", &width);
 
     // allocate memory
     int* intPixels = (int*)malloc(height * width * sizeof(int));
@@ -35,6 +35,8 @@ int main() {
     // Calculate elapsed time in nanoseconds
     double elapsed = (double)(end.QuadPart - start.QuadPart) * 1e9 / frequency.QuadPart;
 
+    printf("\nOutput: \n\n");
+
     // output
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
@@ -43,7 +45,7 @@ int main() {
         printf("\n");
     }
 
-    printf("\n\nElapsed time: %f ns\n\n", elapsed);
+    printf("\n\nElapsed time of execution: %f ns\n\n", elapsed);
 
     // free the allocated memory
     free(intPixels);
