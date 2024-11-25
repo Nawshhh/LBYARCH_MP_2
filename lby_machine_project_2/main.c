@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <windows.h>
 
 // assembly function
 extern void imgCvtGrayInttoFloat(int height, int width, int* intPixels, float* floatPixels);
@@ -8,11 +9,9 @@ extern void imgCvtGrayInttoFloat(int height, int width, int* intPixels, float* f
 int main() {
     int height, width;
 
-    printf("Enter height of the image: ");
-    scanf_s("%d", &height);
+    scanf_s("%d %d", &height, &width);
 
-    printf("Enter width of the image: ");
-    scanf_s("%d", &width);
+
 
     // allocate memory
     int* intPixels = (int*)malloc(height * width * sizeof(int));
@@ -24,14 +23,17 @@ int main() {
         scanf_s("%d", &intPixels[i]);
     }
 
-    clock_t start, end;
-    double time_taken;
+    // High-resolution timing
+    LARGE_INTEGER frequency, start, end;
+    QueryPerformanceFrequency(&frequency); // Get the frequency of the high-resolution counter
+    QueryPerformanceCounter(&start);       // Start time
 
-    start = clock();
-        imgCvtGrayInttoFloat(height, width, intPixels, floatPixels);
-    end = clock();
-    time_taken = ((double)(end - start)) * 1000 / CLOCKS_PER_SEC; 
-    printf("Time it takes to execute using x86-64 is %lf ns\n", time_taken);
+    imgCvtGrayInttoFloat(height, width, intPixels, floatPixels);
+
+    QueryPerformanceCounter(&end);         // End time
+
+    // Calculate elapsed time in nanoseconds
+    double elapsed = (double)(end.QuadPart - start.QuadPart) * 1e9 / frequency.QuadPart;
 
     // output
     for (int i = 0; i < height; i++) {
@@ -40,6 +42,8 @@ int main() {
         }
         printf("\n");
     }
+
+    printf("\n\nElapsed time: %f ns\n\n", elapsed);
 
     // free the allocated memory
     free(intPixels);
