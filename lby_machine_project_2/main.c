@@ -1,3 +1,8 @@
+// Group 10 | LBYARCH S14
+// Wilbert Shawn G. Villagarcia
+// Yohan Ko 
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
