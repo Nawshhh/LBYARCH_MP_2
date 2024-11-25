@@ -2,9 +2,9 @@
 Second Machine Porject of LBYARCH - Introduction to Computer Organization and Architecture Laboratory
 
 ## Task
-Implement a program that converts the grayscale image representation from int based to float based using C and x86 assembly language. Implement the function imgCvtGrayInttoFloat().
-Input: height, width, integer pixel values
-Example.
+Implement a program that converts the grayscale image representation from int based to float based using C and x86 assembly language. Implement the function imgCvtGrayInttoFloat(). <br>
+Input: height, width, integer pixel values <br>
+Example. <br>
 
 Input:
 height: 3 <br>
