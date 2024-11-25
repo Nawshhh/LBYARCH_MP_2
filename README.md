@@ -7,16 +7,16 @@ Input: height, width, integer pixel values
 Example.
 
 Input:
-height: 3
-width 4
-64 89 114 84
-140 166 191 84
-216 242 38 84
+height: 3 <br>
+width 4 <br>
+64 89 114 84 <br>
+140 166 191 84 <br>
+216 242 38 84 <br>
 
-Output: Single Float pixel values
-0.25 0.35 0.45 0.33
-0.55 0.65 0.75 0.33
-0.85 0.95 0.15 0.33
+Output: Single Float pixel values <br>
+0.25 0.35 0.45 0.33 <br>
+0.55 0.65 0.75 0.33 <br>
+0.85 0.95 0.15 0.33 <br>
 
 ## Execution Time
 Presented below are the test cases conducted:
