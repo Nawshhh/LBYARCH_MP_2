@@ -1,5 +1,7 @@
 # LBYARCH x86-to-C Interface Programming Project
-Second Machine Porject of LBYARCH - Introduction to Computer Organization and Architecture Laboratory
+Second Machine Porject of LBYARCH - Introduction to Computer Organization and Architecture Laboratory. <br>
+Wilbert Shawn G. Villagarcia | Yohan Ko
+
 
 ## Task
 Implement a program that converts the grayscale image representation from int based to float based using C and x86 assembly language. Implement the function imgCvtGrayInttoFloat(). <br>
