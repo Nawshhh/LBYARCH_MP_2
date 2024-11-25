@@ -19,9 +19,14 @@ Output: Single Float pixel values
 0.85 0.95 0.15 0.33
 
 ## Execution Time
-Th execution time of the ASM function is always 0.0000ns. No matter what the size of the height and width is, the execution time displays 0.0000ns.
-- Trial 1: 10x10 = 0.0000ns
-- Trial 2: 100x100 = 0.0000ns
-- Trial 3: 200 x 200 = 0.0000ns
-- Trial 4: 300 x 300 = 0.0000ns
-Based from the results of the test cases, all trials lasted for 0ns. The group is not sure if we 
+Presented below are the test cases conducted:
+- Trial 1: 10x10 = 350.00 ns
+- Trial 2: 100x100 = 21040.00 ns
+- Trial 3: 200x200 = 81473.33 ns
+Based from the results of the test cases, the running time is dependent on the size of the array provided. The execution time of the assembly funciton increases as the number of dimension increases. On Trial 1, the run time is 350.00 ns because only 100 elements were calculated and tested. Unlike Trial 2 and Trial 3, the run times were 21040.00 ns and 81473.33 ns respectively. Alternatively, the hardware/machine used also plays a crucial role in executing the assembly function. Not all hardwares have the same specification. Thus, one machine could execute the function much faster than the one used in this experiment.
+
+## Program Output with Correctness
+![image](https://github.com/user-attachments/assets/f8f36938-8227-4ca5-9dad-7958ec95177e)
+
+
+
